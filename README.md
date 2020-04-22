@@ -45,19 +45,31 @@ q5) sum1: (i / 2) + fun(&i)
 
 
 q6) Dynamic Scoping
-
-a. sub3: a,x,w sub2: b,z sub1: y
+   
+       a. sub3: a,x,w sub2: b,z sub1: y
+       
        b. sub3: a,x,w sub1: y,z 
+       
        c. sub1: a,y,z sub3: x,w sub2: b
+       
        d. sub1: a,y,z sub3: x,w 
+       
        e. sub2: a,b,z sub3: x,w sub1: y
+       
        f. sub1: a,y,z sub2: b sub3: x,w
+    
     Static Scoping
+      
        a. sub3: a,x,w
+       
        b. sub3: a,x,w  
+       
        c. sub1: a,y,z 
+       
        d. sub1: a,y,z  
+       
        e. sub2: a,b,z 
+       
        f. sub1: a,y,z
 
 q7) a>b && b>c is the mathematics way of reading a>b>c
@@ -65,17 +77,29 @@ q7) a>b && b>c is the mathematics way of reading a>b>c
     the two do not mean the same thing.
     
 q8) Subscripting:
+       
        a. ((a*b)1 - (1+c)2)3
+       
        b. ((((++a)2 * (b - 1)1)3 / c)4 % d)5
+       
        c. ((a - b)1 / (c & (((d * e)2 / a)3 - 3)4)5)6
+       
        d. ((-a)1 or ((c = d)2 and e)3)4
+       
        e. (((a > b)1 xor c)3 or (d <= 17)2)4
+    
     Right to left Associativity
+       
        a. c + 1 - b * a
+       
        b. d % c / a++ * 1 - b          (does a unary operator need to be first?)
+       
        c. (a-b) / c & 3 - a / e * d  ;  you can't rewrite this without parenthesis because a-b cant be done fist without using                                                   parenthesis
+       
        d.  -a or e and d = c           (does - need to be on the right side for it to be negative still?)
+       
        e.  b < a                     ; this statement needs to have ((d<=17)xor c) be done first but it cant be written without a                                              parenthesis or it will be used with d 
+
 q9) <unary_expr> -> (++ | --)
     <expr> -> <term> {}
        
