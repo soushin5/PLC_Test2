@@ -8,7 +8,8 @@ q3) The static array took the least amount of time because everything about it w
     
     The reason you can't do this in Java is becasue Java creates all arrays as fixed heap dynamic arrays.
  
-q4) 
+q4) Precedence is set by how far it is from the base rule. 
+    Associativity is set by wherever the recursion is placed, left-side or right-side
 
 q5) sum1: (i / 2) + fun(&i)
        ~: i / 2 -> 10 / 2 = 5
@@ -100,6 +101,13 @@ q8) Subscripting:
        
        e.  b < a                     ; this statement needs to have ((d<=17)xor c) be done first but it cant be written without a parenthesis or it will be used with d 
 
-q9) <unary_expr> -> (++ | --)
-    <expr> -> <term> {}
+q9) <expr>    -> <expr> or <term> | <expr> xor <term> | <term>
+    <term>    -> <term> and <assign> | <assign>
+    <assign>  -> <assign> = <inequal> | <assign> += <inequal> | <assign> -= <inequal> | <assign> = <inequal> | <inequal>
+    <inequal> -> <inequal> < <lower> | <inequal> <= <lower> | <inequal> >= <lower> | <inequal> != <lower> | <lower>
+    <lower>   -> <lower> - <upper> | <lower> / <upper> | <lower> % <upper> | <lower> not <upper> | <upper>
+    <upper>   -> <upper> + <post> | <upper> * <post> | <upper> & <post> | <post>
+    <post>    -> <post> ++ <pre> | <post> -- <pre> | <pre>
+    <pre>     -> <pre> - <pare> | <pre> ++ <pare> | <pre> -- <pare> | <pare>
+    <pare>    -> ( <expr> ) | id | int_constant
        
