@@ -94,11 +94,11 @@ q8) Subscripting:
        
        b. d % c / a++ * 1 - b          (does a unary operator need to be first?)
        
-       c. (a-b) / c & 3 - a / e * d  ;  you can't rewrite this without parenthesis because a-b cant be done fist without using                                                   parenthesis
+       c. (a-b) / c & 3 - a / e * d  ;  you can't rewrite this without parenthesis because a-b cant be done fist without using parenthesis
        
        d.  -a or e and d = c           (does - need to be on the right side for it to be negative still?)
        
-       e.  b < a                     ; this statement needs to have ((d<=17)xor c) be done first but it cant be written without a                                              parenthesis or it will be used with d 
+       e.  b < a                     ; this statement needs to have ((d<=17)xor c) be done first but it cant be written without a parenthesis or it will be used with d 
 
 q9) <unary_expr> -> (++ | --)
     <expr> -> <term> {}
