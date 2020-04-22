@@ -101,7 +101,9 @@ q8) Subscripting:
        
        e.  b < a                     ; this statement needs to have ((d<=17)xor c) be done first but it cant be written without a parenthesis or it will be used with d 
 
-q9) <expr>    -> <expr> or <term> | <expr> xor <term> | <term>
+q9)
+
+    <expr>    -> <expr> or <term> | <expr> xor <term> | <term>
     
     <term>    -> <term> and <assign> | <assign>
     
