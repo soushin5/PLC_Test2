@@ -12,24 +12,41 @@ q4)
 
 q5) sum1: (i / 2) + fun(&i)
        ~: i / 2 -> 10 / 2 = 5
+       
        ~: fun(&i) -> take the address of i and give it to fun()
+       
        ~: fun(int *k) -> take the value from the pointer at the address passed to k -> 10
+       
        ~: *k += 4; -> 10 += 4; -> *k = 14 the value at the address in &i is now different
+       
        ~: return 3 * (*k) - 1; -> return 3 * (14) - 1; -> return 41
+       
        ~: (i / 2) + fun(&i); -> 5 + 41 -> 46
+    
     sum2: fun(&j) + (j / 2)
+       
        ~: fun(&j) -> take the address of j and give it to fun()
+       
        ~: fun(int *k) -> take the value from the pointer at the address passed to k -> 10
+       
        ~: *k += 4; -> 10 += 4; -> 14
+       
        ~: return 3 * (*k) - 1; -> return 3 * (14) - 1; -> return 41
+       
        ~: j / 2 -> 14 / 2 = 7
+       
        ~: fun(&j) + (j / 2); -> 41 + 7 -> 48
+    
     w/out precedence 
+       
        ~: sum1 = 46, order is the same with or without precedence
+       
        ~: sum2 = 24, without precedence the order does matter
 
+
 q6) Dynamic Scoping
-       a. sub3: a,x,w sub2: b,z sub1: y
+
+a. sub3: a,x,w sub2: b,z sub1: y
        b. sub3: a,x,w sub1: y,z 
        c. sub1: a,y,z sub3: x,w sub2: b
        d. sub1: a,y,z sub3: x,w 
