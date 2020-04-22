@@ -102,12 +102,20 @@ q8) Subscripting:
        e.  b < a                     ; this statement needs to have ((d<=17)xor c) be done first but it cant be written without a parenthesis or it will be used with d 
 
 q9) <expr>    -> <expr> or <term> | <expr> xor <term> | <term>
+    
     <term>    -> <term> and <assign> | <assign>
+    
     <assign>  -> <assign> = <inequal> | <assign> += <inequal> | <assign> -= <inequal> | <assign> = <inequal> | <inequal>
+    
     <inequal> -> <inequal> < <lower> | <inequal> <= <lower> | <inequal> >= <lower> | <inequal> != <lower> | <lower>
+    
     <lower>   -> <lower> - <upper> | <lower> / <upper> | <lower> % <upper> | <lower> not <upper> | <upper>
+    
     <upper>   -> <upper> + <post> | <upper> * <post> | <upper> & <post> | <post>
+    
     <post>    -> <post> ++ <pre> | <post> -- <pre> | <pre>
+    
     <pre>     -> <pre> - <pare> | <pre> ++ <pare> | <pre> -- <pare> | <pare>
+    
     <pare>    -> ( <expr> ) | id | int_constant
        
