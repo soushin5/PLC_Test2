@@ -71,7 +71,7 @@ q6) Dynamic Scoping
        
        e. sub2: a,b,z main: x,y
        
-       f. sub1: a,y,z mian: x,y
+       f. sub1: a,y,z mian: x
 
 q7) a>b && b>c is the mathematics way of reading a>b>c
     In a C language, it would evaluate to 0 or 1 depending on if a>b or not
