@@ -93,13 +93,13 @@ q8) Subscripting:
        
        a. c + 1 - b * a
        
-       b. d % c / (++a) * 1 - b          need parenthesis because a++ is different from ++a.
+       b. d % c / (++a) * 1 - b      ;  need parenthesis because a++ is different from ++a.
        
        c. (a-b) / c & 3 - a / e * d  ;  you can't rewrite this without parenthesis because a-b cant be done first without using parenthesis
        
-       d.  (-a) or e and d = c           -a needs a parenthesis to be read as negative
+       d.  (-a) or e and d = c       ;  -a needs a parenthesis to be read as negative
        
-       e.  b < a                     ; this statement needs to have ((d<=17)xor c) be done first but it cant be written without a parenthesis or it will be used with d 
+       e.  b < a                     ;  this statement needs to have ((d<=17)xor c) be done first but it cant be written without a parenthesis or it will be used with d 
 
 q9)
 
