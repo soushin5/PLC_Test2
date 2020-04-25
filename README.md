@@ -2,7 +2,7 @@ q1) the program using enums is more readable as you can tell what the variables 
     better since you dont have to cast the enum into an integer or use it within another function.
 
 q2) Perl dynamic scoping is much more flexible and is based on a keyword modifier. Dynamic scoping in Perl works by creating a temporary 
-    value that replaces the global variable inside the scope of the function it is called using the keyword 'local' When the scope is finished, the temp value is discarded and the orginal global value is restored. The Dynamic scoping explained in the chapter is based on the order in which the subprograms are called and will overwrite global values based on order of calls.
+    value that replaces the global variable inside the scope of the function it is called using the keyword 'local'. When the scope is finished, the temp value is discarded and the orginal global value is restored. The Dynamic scoping explained in the chapter is based on the order in which the subprograms are called and will overwrite global values based on order of calls.
 
 q3) The static array took the least amount of time because everything about it was created at compile time. The fixed Heap dynamic array       took the longest because it had to create everything at runtime and then delete it as well before starting the next creation.
     
