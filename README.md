@@ -1,8 +1,11 @@
 q1) the program using enums is more readable as you can tell what the variables are for. In terms of reliability, the integer from is       
     better since you dont have to cast the enum into an integer or use it within another function.
 
-q2) Perl dynamic scoping is based on where you declare the local varibale. The Dynamic scoping explained in the chapter is
-    based on the order in which the subprograms are called.
+q2) Perl dynamic scoping is much more flexible and is based on a keyword modifier. Dynamic scoping in Perl works by creating a temporary 
+    value that replaces the global variable inside the scope of the function it is called using the keyword 'local' When the scope is  
+    finished, the temp value is discarded and the orginal global value is restored. The Dynamic scoping explained in the chapter is 
+    based on the order in which the subprograms are called and will overwrite global values based on order of calls and existence of 
+    matching names.
 
 q3) The static array took the least amount of time because everything about it was created at compile time. The fixed Heap dynamic array       took the longest because it had to create everything at runtime and then delete it as well before starting the next creation.
     
@@ -61,17 +64,17 @@ q6) Dynamic Scoping
     
     Static Scoping
       
-       a. sub3: a,x,w
+       a. sub3: a,x,w main: y,z
        
-       b. sub3: a,x,w  
+       b. sub3: a,x,w main: y,z
        
-       c. sub1: a,y,z 
+       c. sub1: a,y,z main: x
        
-       d. sub1: a,y,z  
+       d. sub1: a,y,z main: x
        
-       e. sub2: a,b,z 
+       e. sub2: a,b,z main: x,y
        
-       f. sub1: a,y,z
+       f. sub1: a,y,z mian: x,y
 
 q7) a>b && b>c is the mathematics way of reading a>b>c
     In a C language, it would evaluate to 0 or 1 depending on if a>b or not
