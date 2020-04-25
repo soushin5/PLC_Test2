@@ -135,7 +135,6 @@ public class front {
 		 System.out.print(lexeme[i]);
 		 }
 		 System.out.print("\n");
-		 expr(br);
 		 return nextToken;
 	}
 	
@@ -217,6 +216,7 @@ public class front {
 		 	getChar(br);
 		 do {
 		 	lex(br);
+			expr(br);
 		 } while (nextToken != 0);
 		 br.close();
 		 }
